@@ -39,13 +39,11 @@ struct Set{
             if !ThreeCardsPlayed.contains(card){
                 ThreeCardsPlayed.append(card)
             }
-                
             else {
                 let index = ThreeCardsPlayed.firstIndex(of: card)
                 ThreeCardsPlayed.remove(at: index!)
             }
         }
-  
         if ThreeCardsPlayed.count == 3 {
             let first = ThreeCardsPlayed[0]
             let second = ThreeCardsPlayed[1]
@@ -86,7 +84,6 @@ struct Set{
             }
     }
     mutating func dealThreeMoreCardsFromModelCaseDeckEmpty(){
-        print(cardsAlreadyMatched.count)
         if cardsAlreadyMatched.count >= 3 {
                 for index in 0...2{
                     let cardToDelete = cardsAlreadyMatched[index]
@@ -97,8 +94,6 @@ struct Set{
                 cardsAlreadyMatched.removeFirst()
                 }
             }
-        print(cardsAlreadyMatched.count)
-        print(cardsOnScreen.count)
         }
     }
 
